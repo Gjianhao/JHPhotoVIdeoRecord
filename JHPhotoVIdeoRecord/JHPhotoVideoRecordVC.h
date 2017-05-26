@@ -39,7 +39,11 @@ typedef NS_ENUM(NSUInteger, LZVideoRecordOrientation) {
 @interface JHPhotoVideoRecordVC : UIViewController
 
 @property (nonatomic, assign) id <JHRecorderVideoDelegate> delegate;
+
 /* 录制模式 */
 @property (nonatomic, assign) GPUImageShowStyle showStyle;
+
+/* 视频限制的时间长度，不传值或为0默认为10秒(单位是秒) */
+@property (nonatomic, assign) NSUInteger limitTime;
 
 @end

@@ -556,8 +556,8 @@
 		3B104B1D1E6009DC007EC877 /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
 		3B104B1E1E6009DC007EC877 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		3B104B1F1E6009DC007EC877 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3B104BCE1E600A9A007EC877 /* JHPhotoVideoRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPhotoVideoRecordVC.h; sourceTree = "<group>"; };
-		3B104BCF1E600A9A007EC877 /* JHPhotoVideoRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPhotoVideoRecordVC.m; sourceTree = "<group>"; };
+		3B104BCE1E600A9A007EC877 /* JHPhotoVideoRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = JHPhotoVideoRecordVC.h; sourceTree = "<group>"; };
+		3B104BCF1E600A9A007EC877 /* JHPhotoVideoRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = JHPhotoVideoRecordVC.m; sourceTree = "<group>"; };
 		3B104BD11E6013FA007EC877 /* camera_btn_camera_normal_87x87_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_btn_camera_normal_87x87_@2x.png"; sourceTree = "<group>"; };
 		3B104BD21E6013FA007EC877 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		3B104BD31E6013FA007EC877 /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
@@ -1468,6 +1468,7 @@
 				3B1049C81E60096D007EC877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -96,7 +96,20 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL grantedVideo) {
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (!granted || !grantedVideo) {
+                    /* 添加提示label */
+                    NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+                    if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未获得授权使用相机或麦克风" message:[NSString stringWithFormat:@"请在%@的\"设置-隐私-相机\"选项中，允许%@访问你的手机相机和麦克风。",[UIDevice currentDevice].model,appName] delegate:self cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
+                    alertView.tag = 1;
+                    [alertView show];
+                }
+            });
+        }];
+    }];
     /* 隐藏状态栏 */
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     if([self.motionManager isAccelerometerAvailable]){
@@ -655,7 +668,7 @@
 
 - (void)timerupdating {
     _allTime += 0.05;
-    [self updateProgress:_allTime / kLimitRecLen];
+    [self updateProgress:_allTime / (_limitTime > 0 ? _limitTime : kLimitRecLen)];
 }
 
 - (void)createNewWritter {
@@ -750,6 +763,7 @@
 }
 
 - (void)closeButtonAction {
+    [_avplayer.player pause];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -981,6 +995,21 @@
     }
     return _motionManager;
 }
-
+#pragma mark alertDelegate
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    
+    switch (buttonIndex) {
+        case 0:
+            if(buttonIndex==0&&alertView.tag==1){
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            NSLog(@"取消");
+            break;
+        default:
+            break;
+    }
+    
+}
 
 @end
