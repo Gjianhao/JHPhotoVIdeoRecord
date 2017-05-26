@@ -206,6 +206,7 @@
 		3B104BF81E6013FA007EC877 /* video_ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B104BE31E6013FA007EC877 /* video_ok@3x.png */; };
 		3B104BF91E6013FA007EC877 /* video_turn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B104BE41E6013FA007EC877 /* video_turn@2x.png */; };
 		3B104BFA1E6013FA007EC877 /* video_turn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B104BE51E6013FA007EC877 /* video_turn@3x.png */; };
+		3B87B9151ED7D7BF00B1D877 /* msg_chat_tool_choosetakepic_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B87B9141ED7D7BF00B1D877 /* msg_chat_tool_choosetakepic_default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -579,6 +580,7 @@
 		3B104BE31E6013FA007EC877 /* video_ok@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_ok@3x.png"; sourceTree = "<group>"; };
 		3B104BE41E6013FA007EC877 /* video_turn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_turn@2x.png"; sourceTree = "<group>"; };
 		3B104BE51E6013FA007EC877 /* video_turn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_turn@3x.png"; sourceTree = "<group>"; };
+		3B87B9141ED7D7BF00B1D877 /* msg_chat_tool_choosetakepic_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "msg_chat_tool_choosetakepic_default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -631,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				3B1049B31E60096D007EC877 /* main.m */,
+				3B87B9141ED7D7BF00B1D877 /* msg_chat_tool_choosetakepic_default@2x.png */,
 				3B104BD11E6013FA007EC877 /* camera_btn_camera_normal_87x87_@2x.png */,
 				3B104BD21E6013FA007EC877 /* close@2x.png */,
 				3B104BD31E6013FA007EC877 /* close@3x.png */,
@@ -1119,6 +1122,7 @@
 				3B1049BF1E60096D007EC877 /* Assets.xcassets in Resources */,
 				3B104BFA1E6013FA007EC877 /* video_turn@3x.png in Resources */,
 				3B1049BD1E60096D007EC877 /* Main.storyboard in Resources */,
+				3B87B9151ED7D7BF00B1D877 /* msg_chat_tool_choosetakepic_default@2x.png in Resources */,
 				3B104BE61E6013FA007EC877 /* camera_btn_camera_normal_87x87_@2x.png in Resources */,
 				3B104BC91E6009DC007EC877 /* License.txt in Resources */,
 				3B104BF41E6013FA007EC877 /* touch_focus_x@2x.png in Resources */,
